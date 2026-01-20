@@ -1,2 +1,5 @@
-vendor/
-cache/
+/vendor/
+/cache/
+/src/build_tools/node_modules/
+/s/
+/vfl.json

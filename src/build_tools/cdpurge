@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+const fs = require("fs");
+fs.rmSync("../../s", { recursive: true, force: true });
+fs.rmSync("../../vfl.json", { force: true });
