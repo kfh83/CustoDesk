@@ -21,9 +21,4 @@ function build()
     return stream;
 }
 
-function watch()
-{
-
-}
-
-module.exports = { build, watch };
+module.exports = build;
