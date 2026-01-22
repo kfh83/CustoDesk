@@ -24,6 +24,8 @@ function gulp(basePath = "")
         g_vflMap[`${basePath}/${basename}${extname}`]
             = `${basePath}/${basename}-vfl${vflHash}${extname}`;
 
+        let originalName = path.basename(file.path);
+        file._originalName = originalName;
         return GulpRename({ suffix: `-vfl${vflHash}` })._transform(file, encoding, cb);
     };
     return stream;
