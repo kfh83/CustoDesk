@@ -5,8 +5,22 @@
         <meta charset="UTF-8">
         <title>Document</title>
         <link rel="stylesheet" href="{{ custodesk.vfl.resolveCSS("core") }}">
+        <link rel="stylesheet" href="{{ custodesk.vfl.resolveCSS("header") }}">
     </head>
     <body>
+		<div id="headerArea">
+			<div id="headerLogo"></div>
+			<div id="linksBar">
+				<a href="">Home</a>
+				<a href="">Methods</a>
+				<a href="">About</a>
+				<div id="accountActions">
+					<a href="">Create an account</a>
+					<span>or</span>
+					<a href="">	Log in</a>
+				</div>
+			</div>
+		</div>
         {% block content %}{% endblock %}
     </body>
 </html>
