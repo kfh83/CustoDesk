@@ -1,5 +1,6 @@
 /vendor/
 /cache/
 /src/build_tools/node_modules/
+/src/css/_imgmap.scss
 /s/
 /vfl.json
