@@ -1,5 +1,15 @@
-{% extends "core.twig" %}
+{% extends "two_col_page.twig" %}
+{% from "common/macros.twig" import card_begin %}
+{% from "common/macros.twig" import card_end %}
 
-{% block content %}
-<h1>Home</h1>
+{% block left_col_content %}
+{{ card_begin("hi jackass") }}
+    hi bruh hi
+{{ card_end() }}
+{% endblock %}
+
+{% block right_col_content %}
+{{ card_begin("hi jackass") }}
+    destroy all opps
+{{ card_end() }}
 {% endblock %}
