@@ -51,4 +51,9 @@ class VFL
     {
         return $this->resolve("s/jsbin/{$name}.js");
     }
+
+    public function resolveImage(string $name): ?string
+    {
+        return $this->resolve("s/imgbin/{$name}.png");
+    }
 }
