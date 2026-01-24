@@ -1,6 +1,12 @@
 {% extends "core.twig" %}
+{% from "common/macros.twig" import card_begin %}
+{% from "common/macros.twig" import card_end %}
 
 {% block content %}
-<h1>Not Found</h1>
-<p>The page you requested was not found on this site.</p>
+
+{{ card_begin("Error 404: Not Found") }}
+The page you requested was not found on this site.
+<br>
+<a href="">Return to homepage</a>
+{{ card_end() }}
 {% endblock %}
