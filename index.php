@@ -13,7 +13,10 @@ Controller::route([
         "/about" => About\AboutController::class,
         "/login" => Login\LoginController::class,
         "default" => Common\PageController::class,
-    ]
+    ],
+    "post" => [
+        "/login" => Login\LoginController::class,
+    ],
 ]);
 
 Controller::run();

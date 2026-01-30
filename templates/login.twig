@@ -4,26 +4,31 @@
 
 {% block content %}
 {{ card_begin("Log into CustoDesk") }}
-	<table id="loginPage">
-		<tbody>
-			<tr>
-				<td><label for="username">Username:</label></td>
-				<td><input class="inputField" type="text" name="username" required=""></td>
-			</tr>
-			<tr>
-				<td><label for="password">Password:</label></td>
-				<td><input class="inputField" type="text" name="password" required=""></td>
-			</tr>
-			<tr>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<input type="submit" value="Login" name="login" class="formButton">
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	{% if data.error %}
+	<p class="error">{{ data.error }}</p>
+	{% endif %}
+	<form action="/login" method="post" id="loginForm">
+		<table>
+			<tbody>
+				<tr>
+					<td><label for="username">Username:</label></td>
+					<td><input class="inputField" type="text" name="username" required=""></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password:</label></td>
+					<td><input class="inputField" type="text" name="password" required=""></td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="Login" class="formButton">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
 	<p>Don't have an account? <a href="/register">Create one!</a></p>
 {{ card_end() }}
 {% endblock %}
