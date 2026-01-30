@@ -2,21 +2,28 @@
 {% from "common/macros.twig" import card_begin %}
 {% from "common/macros.twig" import card_end %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ custodesk.vfl.resolveCSS("login") }}">
+{% endblock %}
+
 {% block content %}
-
 {{ card_begin("Log into CustoDesk") }}
-<div id="loginPage">
-	<div class="fieldwithLabel">
-		<div style="width: 70px;">Username:</div>
-		<input class="inputField" type="text" name="username" required>
-	</div>
-
-	<div class="fieldwithLabel">
-		<div style="width: 70px;">Password:</div>
-		<input class="inputField" type="password" name="password" required>
-	</div>
-
-	<input type="submit" value="Login" name="login" class="formButton">
-</div>
+	<table id="loginPage">
+		<tbody>
+			<tr>
+				<td><label for="username">Username:</label></td>
+				<td><input class="inputField" type="text" name="username" required=""></td>
+			</tr>
+			<tr>
+				<td><label for="password">Password:</label></td>
+				<td><input class="inputField" type="text" name="password" required=""></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Login" name="login" class="formButton">
+				</td>
+			</tr>
+		</tbody>
+	</table>
 {{ card_end() }}
 {% endblock %}

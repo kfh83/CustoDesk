@@ -6,6 +6,7 @@
         <title>CustoDesk</title>
 		<link rel="shortcut icon" href="{{ custodesk.vfl.resolveImage("favicon") }}" type="image/png">
         <link rel="stylesheet" href="{{ custodesk.vfl.resolveCSS("core") }}">
+		{% block css %}{% endblock %}
     </head>
     <body>
 		<div id="headerArea">
@@ -30,6 +31,7 @@
 			© 2026 CustoDesk. All Rights Reserved.
 		</div>
 		<script src="{{custodesk.vfl.resolveJS("core") }}"> </script>
+		{% block js %}{% endblock %}
     </body>
 </html>
 {% endapply %}
